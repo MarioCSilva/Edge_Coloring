@@ -1,7 +1,7 @@
 import sys
 import argparse
 import logging
-from generator import Graph_Generator
+from graph_manager import Graph_Manager
 from chromatic_index import Chromatic_Index
 
 class Main:
