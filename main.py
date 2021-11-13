@@ -6,20 +6,16 @@ from chromatic_index import Chromatic_Index
 
 class Main:
 	def __init__(self):
-		self.check_arguments()
+		self.num_nodes, self.generate, self.show_graph = self.check_arguments()
+		self.graph_manager = Graph_Manager()
+
+		self.handle_args()
 
 
 	def usage(self):
 		print("Usage: python3 main.py\
-			\n\t-i <Directory name for indexation:str>\
-			\n\t-f <File Name for data set:str>\
-			\n\t-m <Minimum Length Filter>\
-			\n\t-l <Length for Minimum Length Filter:int>\
-			\n\t-p <Porter Stemmer Filter>\
-			\n\t-stopwords <Stop Words Filter>\
-			\n\t -stopwords_file <Stop Words File>\
-			\n\t-mp <Map Reduce>\
-			\n\t-search <Search Engine>")
+			\n\t-n <Number of Nodes for the Graph to be used for any operation: int>\
+			\n\t-g <Generate Graph>")
 		sys.exit()
 
 
@@ -29,16 +25,10 @@ class Main:
 			usage=self.usage
 		)
 		arg_parser.add_argument('-help', action='store_true')
-		arg_parser.add_argument('-index_dir', nargs=1, default=[''])
-		arg_parser.add_argument('-file_name', nargs=1, default=['amazon_reviews.tsv'])
-		arg_parser.add_argument('-min_length', action='store_true')
-		arg_parser.add_argument('-length', nargs=1, type=int)
-		arg_parser.add_argument('-porter', action='store_true')
-		arg_parser.add_argument('-stopwords', action='store_true')
-		arg_parser.add_argument('-stopwords_file', nargs=1,  default=['stopwords.txt'])
-		arg_parser.add_argument('-search', action='store_true')
-		arg_parser.add_argument('-mp', action='store_true')
-		arg_parser.add_argument('-positions', action='store_true')
+		arg_parser.add_argument('-num_nodes', nargs=1, type=int, default=[4])
+		arg_parser.add_argument('-generate', action='store_true')
+		arg_parser.add_argument('-show_graph', action='store_true')
+
 
 		try:
 			args = arg_parser.parse_args()
@@ -48,15 +38,16 @@ class Main:
 		if args.help:
 			self.usage()
 
-		self.search = args.search
-		self.index_dir = args.index_dir[0]
-		file_name = args.file_name[0]
-		if self.index_dir == "":
-			self.index_dir = file_name.split('.')[0]
-		min_len = args.length[0] if args.min_length and args.length else None
+		return args.num_nodes[0], args.generate, args.show_graph
 
-		return self.index_dir, file_name, args.min_length, min_len, args.porter,\
-			args.stopwords, args.stopwords_file[0], args.mp, args.positions
+
+	def handle_args(self):
+		if self.generate:
+			print(self.num_nodes, type(self.num_nodes))
+			G = self.graph_manager.generate(self.num_nodes)
+			if self.show_graph:
+				self.graph_manager.show_graph(G)
+			return
 
 
 if __name__ == "__main__":
