@@ -121,6 +121,3 @@ class Graph_Manager:
 			positions = {n:data['pos'] for n, data in G.nodes(data=True)}
 
 		return G, positions
-
-
-gm = Graph_Manager()
