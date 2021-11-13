@@ -18,6 +18,9 @@ class Graph_Manager:
 	def __init__(self):
 		self.GRAPH_DIRECTORY = './graphs/'
 		self.SEED = 93430
+		
+		# Sets grid behind all graph elements for better plot view experience
+		plt.rc('axes', axisbelow=True)
 
 
 	def generate(self, num_nodes):
@@ -77,9 +80,8 @@ class Graph_Manager:
 		positions = {n:data['pos'] for n, data in G.nodes(data=True)}
 
 		fig, ax = plt.subplots()
-
-		nx.draw(G, positions, with_labels=True, font_weight='bold', ax=ax, node_size=700, font_size=7.5)
-
+		fig.set_size_inches(8.5, 8.5)
+		nx.draw(G, positions, with_labels=True, font_weight='bold', ax=ax, node_size=400, font_size=8, edge_color='g')
 		limits=plt.axis('on')
 		plt.xticks([1,2,3,4,5,6,7,8,9])
 		plt.yticks([1,2,3,4,5,6,7,8,9])
@@ -95,7 +97,8 @@ class Graph_Manager:
 		positions = {n:data['pos'] for n, data in G.nodes(data=True)}
 
 		fig, ax = plt.subplots()
-		nx.draw(G, positions, with_labels=True, font_weight='bold', ax=ax, node_size=700, font_size=7.5)
+		fig.set_size_inches(8.5, 8.5)
+		nx.draw(G, positions, with_labels=True, font_weight='bold', ax=ax, node_size=400, font_size=8, edge_color='g')
 		limits=plt.axis('on')
 		plt.xticks([1,2,3,4,5,6,7,8,9])
 		plt.yticks([1,2,3,4,5,6,7,8,9])

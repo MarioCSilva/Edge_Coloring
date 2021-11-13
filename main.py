@@ -43,7 +43,6 @@ class Main:
 
 	def handle_args(self):
 		if self.generate:
-			print(self.num_nodes, type(self.num_nodes))
 			G = self.graph_manager.generate(self.num_nodes)
 			if self.show_graph:
 				self.graph_manager.show_graph(G)
