@@ -51,17 +51,7 @@ class Main:
 			args.greedy, args.order_degree_heur, args.vizing_theorem, args.permutations
 
 
-	def handle_args(self):
-
-		for n in range(20,21):
-			G = self.graph_manager.generate(n)
-			self.handle_results(*self.ci_calculator.exhaustive_coloring(G, True),\
-				"Exhaustive_Vizing")
-			self.handle_results(*self.ci_calculator.greedy_coloring(G, False),\
-				"Greedy")
-			self.handle_results(*self.ci_calculator.greedy_coloring(G, True),\
-				"Greedy_Heuristic")
-			
+	def handle_args(self):			
 		G = None
 		if self.generate:
 			G = self.graph_manager.generate(self.num_nodes)
