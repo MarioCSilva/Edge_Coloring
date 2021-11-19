@@ -3,12 +3,12 @@ import argparse
 import logging
 from graph_manager import Graph_Manager
 from chromatic_index_calc import Chromatic_Index_Calc
-
+import networkx as nx
 
 class Main:
 	def __init__(self):
-		self.num_nodes, self.generate, self.show_graph,\
-			self.exhaustive, self.greedy, self.order_degree_heur, self.vizing_theorem =\
+		self.num_nodes, self.generate, self.show_graph, self.exhaustive,\
+			self.greedy, self.order_degree_heur, self.vizing_theorem, self.permutations =\
 			self.check_arguments()
 		
 		self.graph_manager = Graph_Manager()
@@ -37,6 +37,7 @@ class Main:
 		arg_parser.add_argument('-vizing_theorem', action='store_true')
 		arg_parser.add_argument('-show_graph', action='store_true')
 		arg_parser.add_argument('-order_degree_heur', action='store_true')
+		arg_parser.add_argument('-permutations', action='store_true')
 
 		try:
 			args = arg_parser.parse_args()
@@ -46,8 +47,8 @@ class Main:
 		if args.help:
 			self.usage()
 
-		return args.num_nodes[0], args.generate, args.show_graph,\
-			args.exhaustive, args.greedy, args.order_degree_heur, args.vizing_theorem
+		return args.num_nodes[0], args.generate, args.show_graph, args.exhaustive,\
+			args.greedy, args.order_degree_heur, args.vizing_theorem, args.permutations
 
 
 	def handle_args(self):
@@ -62,15 +63,22 @@ class Main:
 		if self.exhaustive:
 			self.handle_results(*self.ci_calculator.exhaustive_coloring(G, self.vizing_theorem),\
 				"Exhaustive" + ('_Vizing' if self.vizing_theorem else ''))
+		
+		if self.permutations:
+			self.handle_results(*self.ci_calculator.exhaustive_perms_coloring(G),\
+				"Exhaustive_Permutations")
 
 		if self.greedy:
 			self.handle_results(*self.ci_calculator.greedy_coloring(G, self.order_degree_heur),\
 				"Greedy_Heuristics")
 
 
-	def handle_results(self, ci, colored_G, total_time, strategy):
-		logging.info(f"Chromatic Index Calculated with {strategy} search: {ci}")
+	def handle_results(self, ci, colored_G, total_time, basic_operations, total_config_searches, strategy):
+		logging.info(f"Graph with {nx.number_of_nodes(colored_G)} nodes and {nx.number_of_edges(colored_G)} edges")
+		logging.info(f"Chromatic Index Calculated with {strategy.replace('_', ' ')} search: {ci}")
 		logging.info(f"Time to Find: {total_time} seconds")
+		logging.info(f"Total Basic Operations: {basic_operations}")
+		logging.info(f"Total Configurations Searched: {total_config_searches}")
 
 		# store graph png and txt later on a different dir (colored graphs)
 
