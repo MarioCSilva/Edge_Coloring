@@ -51,7 +51,7 @@ class Main:
 			args.greedy, args.order_degree_heur, args.vizing_theorem, args.permutations
 
 
-	def handle_args(self):			
+	def handle_args(self):
 		G = None
 		if self.generate:
 			G = self.graph_manager.generate(self.num_nodes)
