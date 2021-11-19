@@ -120,7 +120,7 @@ class Chromatic_Index_Calc:
                                  edge_ind, basic_operations, total_config_searchs):
         # all edges colored then return
         if edge_ind == len(edges):
-            return edges_colors
+            return edges_colors, basic_operations, total_config_searchs
 
         edge = edges[edge_ind]
 
@@ -139,15 +139,16 @@ class Chromatic_Index_Calc:
                 basic_operations += 1
 
                 # recursion to check other edges
-                result = self.m_color_search_backtrack(edge_adj, m, edges,\
+                result_edges_colors, basic_operations, total_config_searchs =\
+                    self.m_color_search_backtrack(edge_adj, m, edges,\
                     edges_colors, edge_ind+1, basic_operations, total_config_searchs)
                 total_config_searchs += 1
-                if result:
-                    return edges_colors, basic_operations, total_config_searchs
+                if result_edges_colors:
+                    return result_edges_colors, basic_operations, total_config_searchs
                 # if color gives no solution, reset color and backtracks here
                 edges_colors[edge] = -1
         total_config_searchs += 1
-        return None, None, None
+        return None, basic_operations, total_config_searchs
 
 
     def exhaustive_coloring(self, G, vizing_theorem):
@@ -168,23 +169,26 @@ class Chromatic_Index_Calc:
 
         # Vizing Theorem
         if vizing_theorem:
-            highest_node_degree = sorted(G.degree, key=lambda x: x[1], reverse=True)[0][1]
-            m_values = [highest_node_degree, highest_node_degree + 1]
+            highest_edge_degree = sorted(G.degree, key=lambda x: x[1], reverse=True)[0][1]
+            m_values = [highest_edge_degree + 1, highest_edge_degree]
             basic_operations += 1
         else:
             m_values = [1]
 
         while True:
             m = m_values.pop()
+
             # start search on the first edge of index 0
-            edges_colors, basic_operations, total_config_searchs =\
+            result_edges_colors, basic_operations, total_config_searchs =\
                 self.m_color_search_backtrack(edge_adj, m, edges, edges_colors, 0, basic_operations, total_config_searchs)
-            if edges_colors:
+
+            if result_edges_colors:
+                edges_colors = result_edges_colors
                 chromatic_index = m
                 break
-            edges_colors = {edge: -1 for edge in G.edges()}
+
             if not vizing_theorem:
-                m_values.append(m*1)
+                m_values.append(m + 1)
 
         total_time = time.time() - start_time
 
@@ -206,7 +210,6 @@ class Chromatic_Index_Calc:
         all_permutations_edges = list(it.permutations(edges))
         basic_operations += 1
 
-        print(len(all_permutations_edges))
         # get adjacency matrix for edges and list of ordered edges descending by their edge connectivity
         adjacent_edges = self.edge_connectivity(edges)
         basic_operations += 1

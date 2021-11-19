@@ -1,0 +1,414 @@
+
+- Graph with 2 nodes and 1 edges
+Chromatic Index Calculated with Exhaustive search: 1
+Time to Find: 0.0 seconds
+Total Basic Operations: 3
+Total Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 1
+Time to Find: 0.0 seconds
+Total Basic Operations: 4
+Total Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 1
+Time to Find: 0.0 seconds
+Total Basic Operations: 3
+Total Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Chromatic Index Calculated with Greedy search: 1
+Time to Find: 0.0 seconds
+Total Basic Operations: 2
+Total Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Chromatic Index Calculated with Greedy Heuristic search: 1
+Time to Find: 0.0 seconds
+Total Basic Operations: 3
+Total Configurations Searched: 1
+
+- Graph with 3 nodes and 2 edges
+Chromatic Index Calculated with Exhaustive search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 9
+Total Configurations Searched: 5
+
+- Graph with 3 nodes and 2 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 7
+Total Configurations Searched: 2
+
+- Graph with 3 nodes and 2 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 10
+Total Configurations Searched: 2
+
+- Graph with 3 nodes and 2 edges
+Chromatic Index Calculated with Greedy search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 5
+Total Configurations Searched: 1
+
+- Graph with 3 nodes and 2 edges
+Chromatic Index Calculated with Greedy Heuristic search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 6
+Total Configurations Searched: 1
+
+- Graph with 4 nodes and 3 edges
+Chromatic Index Calculated with Exhaustive search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 27
+Total Configurations Searched: 15
+
+- Graph with 4 nodes and 3 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 11
+Total Configurations Searched: 3
+
+- Graph with 4 nodes and 3 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 44
+Total Configurations Searched: 6
+
+- Graph with 4 nodes and 3 edges
+Chromatic Index Calculated with Greedy search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 8
+Total Configurations Searched: 1
+
+- Graph with 4 nodes and 3 edges
+Chromatic Index Calculated with Greedy Heuristic search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 9
+Total Configurations Searched: 1
+
+- Graph with 5 nodes and 4 edges
+Chromatic Index Calculated with Exhaustive search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 17
+Total Configurations Searched: 9
+
+- Graph with 5 nodes and 4 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 15
+Total Configurations Searched: 6
+
+- Graph with 5 nodes and 4 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 242
+Total Configurations Searched: 24
+
+- Graph with 5 nodes and 4 edges
+Chromatic Index Calculated with Greedy search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 11
+Total Configurations Searched: 1
+
+- Graph with 5 nodes and 4 edges
+Chromatic Index Calculated with Greedy Heuristic search: 2
+Time to Find: 0.0 seconds
+Total Basic Operations: 12
+Total Configurations Searched: 1
+
+- Graph with 6 nodes and 5 edges
+Chromatic Index Calculated with Exhaustive search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 64
+Total Configurations Searched: 39
+
+- Graph with 6 nodes and 5 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 16
+Total Configurations Searched: 5
+
+- Graph with 6 nodes and 5 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 3
+Time to Find: 0.0019989013671875 seconds
+Total Basic Operations: 1562
+Total Configurations Searched: 120
+
+- Graph with 6 nodes and 5 edges
+Chromatic Index Calculated with Greedy search: 3
+Time to Find: 0.0 seconds
+Total Basic Operations: 14
+Total Configurations Searched: 1
+
+- Graph with 6 nodes and 5 edges
+Chromatic Index Calculated with Greedy Heuristic search: 3
+Time to Find: 0.0010001659393310547 seconds
+Total Basic Operations: 15
+Total Configurations Searched: 1
+
+- Graph with 7 nodes and 6 edges
+Chromatic Index Calculated with Exhaustive search: 5
+Time to Find: 0.0010001659393310547 seconds
+Total Basic Operations: 907
+Total Configurations Searched: 370
+
+- Graph with 7 nodes and 6 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 5
+Total Basic Operations: 24
+Total Configurations Searched: 6
+
+- Graph with 7 nodes and 6 edges
+Chromatic Index Calculated with Exhaustive Permutations search: 5
+Time to Find: 0.01399683952331543 seconds
+Total Basic Operations: 11522
+Total Configurations Searched: 720
+
+- Graph with 7 nodes and 6 edges
+Chromatic Index Calculated with Greedy search: 5
+Time to Find: 0.0 seconds
+Total Basic Operations: 17
+Total Configurations Searched: 1
+
+- Graph with 7 nodes and 6 edges
+Chromatic Index Calculated with Greedy Heuristic search: 5
+Time to Find: 0.0 seconds
+Total Basic Operations: 18
+Total Configurations Searched: 1
+
+- Graph with 9 nodes and 12 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 5
+Time to Find: 0.0 seconds
+Total Basic Operations: 43
+Total Configurations Searched: 12
+
+- Graph with 9 nodes and 12 edges
+Chromatic Index Calculated with Greedy search: 5
+Time to Find: 0.0 seconds
+Total Basic Operations: 35
+Total Configurations Searched: 1
+
+- Graph with 9 nodes and 12 edges
+Chromatic Index Calculated with Greedy Heuristic search: 5
+Time to Find: 0.0 seconds
+Total Basic Operations: 36
+Total Configurations Searched: 1
+
+- Graph with 10 nodes and 13 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 49
+Total Configurations Searched: 13
+
+- Graph with 10 nodes and 13 edges
+Chromatic Index Calculated with Greedy search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 38
+Total Configurations Searched: 1
+
+- Graph with 10 nodes and 13 edges
+Chromatic Index Calculated with Greedy Heuristic search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 39
+Total Configurations Searched: 1
+
+- Graph with 11 nodes and 18 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 105
+Total Configurations Searched: 28
+
+- Graph with 11 nodes and 18 edges
+Chromatic Index Calculated with Greedy search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 53
+Total Configurations Searched: 1
+
+- Graph with 11 nodes and 18 edges
+Chromatic Index Calculated with Greedy Heuristic search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 54
+Total Configurations Searched: 1
+
+- Graph with 12 nodes and 19 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 5
+Time to Find: 0.0019989013671875 seconds
+Total Basic Operations: 3719
+Total Configurations Searched: 1235
+
+- Graph with 12 nodes and 19 edges
+Chromatic Index Calculated with Greedy search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 56
+Total Configurations Searched: 1
+
+- Graph with 12 nodes and 19 edges
+Chromatic Index Calculated with Greedy Heuristic search: 5
+Time to Find: 0.001001596450805664 seconds
+Total Basic Operations: 57
+Total Configurations Searched: 1
+
+- Graph with 13 nodes and 22 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 87
+Total Configurations Searched: 22
+
+- Graph with 13 nodes and 22 edges
+Chromatic Index Calculated with Greedy search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 65
+Total Configurations Searched: 1
+
+- Graph with 13 nodes and 22 edges
+Chromatic Index Calculated with Greedy Heuristic search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 66
+Total Configurations Searched: 1
+
+- Graph with 14 nodes and 26 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Total Basic Operations: 314
+Total Configurations Searched: 84
+
+- Graph with 14 nodes and 26 edges
+Chromatic Index Calculated with Greedy search: 7
+Time to Find: 0.0 seconds
+Total Basic Operations: 77
+Total Configurations Searched: 1
+
+- Graph with 14 nodes and 26 edges
+Chromatic Index Calculated with Greedy Heuristic search: 7
+Time to Find: 0.0009992122650146484 seconds
+Total Basic Operations: 78
+Total Configurations Searched: 1
+
+- Graph with 15 nodes and 28 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 127
+Total Configurations Searched: 28
+
+- Graph with 15 nodes and 28 edges
+Chromatic Index Calculated with Greedy search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 83
+Total Configurations Searched: 1
+
+- Graph with 15 nodes and 28 edges
+Chromatic Index Calculated with Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 84
+Total Configurations Searched: 1
+
+- Graph with 16 nodes and 29 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 117
+Total Configurations Searched: 29
+
+- Graph with 16 nodes and 29 edges
+Chromatic Index Calculated with Greedy search: 8
+Time to Find: 0.0010004043579101562 seconds
+Total Basic Operations: 86
+Total Configurations Searched: 1
+
+- Graph with 16 nodes and 29 edges
+Chromatic Index Calculated with Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 87
+Total Configurations Searched: 1
+
+- Graph with 17 nodes and 37 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 251
+Total Configurations Searched: 55
+
+- Graph with 17 nodes and 37 edges
+Chromatic Index Calculated with Greedy search: 9
+Time to Find: 0.0 seconds
+Total Basic Operations: 110
+Total Configurations Searched: 1
+
+- Graph with 17 nodes and 37 edges
+Chromatic Index Calculated with Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 111
+Total Configurations Searched: 1
+
+- Graph with 18 nodes and 39 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 175
+Total Configurations Searched: 39
+
+- Graph with 18 nodes and 39 edges
+Chromatic Index Calculated with Greedy search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 116
+Total Configurations Searched: 1
+
+- Graph with 18 nodes and 39 edges
+Chromatic Index Calculated with Greedy Heuristic search: 8
+Time to Find: 0.0009987354278564453 seconds
+Total Basic Operations: 117
+Total Configurations Searched: 1
+
+- Graph with 19 nodes and 42 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 7
+Time to Find: 0.0009996891021728516 seconds
+Total Basic Operations: 597
+Total Configurations Searched: 146
+
+- Graph with 19 nodes and 42 edges
+Chromatic Index Calculated with Greedy search: 8
+Time to Find: 0.0 seconds
+Total Basic Operations: 125
+Total Configurations Searched: 1
+
+- Graph with 19 nodes and 42 edges
+Chromatic Index Calculated with Greedy Heuristic search: 7
+Time to Find: 0.0009992122650146484 seconds
+Total Basic Operations: 126
+Total Configurations Searched: 1
+
+- Graph with 20 nodes and 51 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 9
+Time to Find: 0.0009987354278564453 seconds
+Total Basic Operations: 241
+Total Configurations Searched: 51
+
+- Graph with 20 nodes and 51 edges
+Chromatic Index Calculated with Greedy search: 9
+Time to Find: 0.0 seconds
+Total Basic Operations: 152
+Total Configurations Searched: 1
+
+- Graph with 20 nodes and 51 edges
+Chromatic Index Calculated with Greedy Heuristic search: 9
+Time to Find: 0.0010073184967041016 seconds
+Total Basic Operations: 153
+Total Configurations Searched: 1
+
+- Graph with 21 nodes and 51 edges
+Chromatic Index Calculated with Exhaustive Vizing search: 9
+Time to Find: 0.0 seconds
+Total Basic Operations: 246
+Total Configurations Searched: 51
+
+- Graph with 21 nodes and 51 edges
+Chromatic Index Calculated with Greedy search: 9
+Time to Find: 0.00099945068359375 seconds
+Total Basic Operations: 152
+Total Configurations Searched: 1
+
+- Graph with 21 nodes and 51 edges
+Chromatic Index Calculated with Greedy Heuristic search: 9
+Time to Find: 0.00099945068359375 seconds
+Total Basic Operations: 153
+Total Configurations Searched: 1
+
