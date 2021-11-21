@@ -1,0 +1,416 @@
+
+- Graph with 2 nodes and 1 edges
+Exhaustive search: 1
+Time to Find: 0.0 seconds
+Basic Operations: 3
+Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Exhaustive Vizing Theorem search: 1
+Time to Find: 0.0 seconds
+Basic Operations: 4
+Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Exhaustive Permutations search: 1
+Time to Find: 0.0 seconds
+Basic Operations: 3
+Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Greedy search: 1
+Time to Find: 0.0 seconds
+Basic Operations: 2
+Configurations Searched: 1
+
+- Graph with 2 nodes and 1 edges
+Greedy Heuristic search: 1
+Time to Find: 0.0 seconds
+Basic Operations: 3
+Configurations Searched: 1
+
+
+- Graph with 3 nodes and 2 edges
+Exhaustive search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 9
+Configurations Searched: 5
+
+- Graph with 3 nodes and 2 edges
+Exhaustive Vizing search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 7
+Configurations Searched: 2
+
+- Graph with 3 nodes and 2 edges
+Exhaustive Permutations search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 10
+Configurations Searched: 2
+
+- Graph with 3 nodes and 2 edges
+Greedy search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 5
+Configurations Searched: 1
+
+- Graph with 3 nodes and 2 edges
+Greedy Heuristic search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 6
+Configurations Searched: 1
+
+
+- Graph with 4 nodes and 3 edges
+Exhaustive search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 27
+Configurations Searched: 15
+
+- Graph with 4 nodes and 3 edges
+Exhaustive Vizing search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 11
+Configurations Searched: 3
+
+- Graph with 4 nodes and 3 edges
+Exhaustive Permutations search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 44
+Configurations Searched: 6
+
+- Graph with 4 nodes and 3 edges
+Greedy search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 8
+Configurations Searched: 1
+
+- Graph with 4 nodes and 3 edges
+Greedy Heuristic search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 9
+Configurations Searched: 1
+
+- Graph with 5 nodes and 4 edges
+Exhaustive search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 17
+Configurations Searched: 9
+
+- Graph with 5 nodes and 4 edges
+Exhaustive Vizing search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 15
+Configurations Searched: 6
+
+- Graph with 5 nodes and 4 edges
+Exhaustive Permutations search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 242
+Configurations Searched: 24
+
+- Graph with 5 nodes and 4 edges
+Greedy search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 11
+Configurations Searched: 1
+
+- Graph with 5 nodes and 4 edges
+Greedy Heuristic search: 2
+Time to Find: 0.0 seconds
+Basic Operations: 12
+Configurations Searched: 1
+
+- Graph with 6 nodes and 5 edges
+Exhaustive search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 64
+Configurations Searched: 39
+
+- Graph with 6 nodes and 5 edges
+Exhaustive Vizing search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 16
+Configurations Searched: 5
+
+- Graph with 6 nodes and 5 edges
+Exhaustive Permutations search: 3
+Time to Find: 0.0019989013671875 seconds
+Basic Operations: 1562
+Configurations Searched: 120
+
+- Graph with 6 nodes and 5 edges
+Greedy search: 3
+Time to Find: 0.0 seconds
+Basic Operations: 14
+Configurations Searched: 1
+
+- Graph with 6 nodes and 5 edges
+Greedy Heuristic search: 3
+Time to Find: 0.0010001659393310547 seconds
+Basic Operations: 15
+Configurations Searched: 1
+
+- Graph with 7 nodes and 6 edges
+Exhaustive search: 5
+Time to Find: 0.0010001659393310547 seconds
+Basic Operations: 907
+Configurations Searched: 370
+
+- Graph with 7 nodes and 6 edges
+Exhaustive Vizing search: 5
+Basic Operations: 24
+Configurations Searched: 6
+
+- Graph with 7 nodes and 6 edges
+Exhaustive Permutations search: 5
+Time to Find: 0.01399683952331543 seconds
+Basic Operations: 11522
+Configurations Searched: 720
+
+- Graph with 7 nodes and 6 edges
+Greedy search: 5
+Time to Find: 0.0 seconds
+Basic Operations: 17
+Configurations Searched: 1
+
+- Graph with 7 nodes and 6 edges
+Greedy Heuristic search: 5
+Time to Find: 0.0 seconds
+Basic Operations: 18
+Configurations Searched: 1
+
+- Graph with 9 nodes and 12 edges
+Exhaustive Vizing search: 5
+Time to Find: 0.0 seconds
+Basic Operations: 43
+Configurations Searched: 12
+
+- Graph with 9 nodes and 12 edges
+Greedy search: 5
+Time to Find: 0.0 seconds
+Basic Operations: 35
+Configurations Searched: 1
+
+- Graph with 9 nodes and 12 edges
+Greedy Heuristic search: 5
+Time to Find: 0.0 seconds
+Basic Operations: 36
+Configurations Searched: 1
+
+- Graph with 10 nodes and 13 edges
+Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 49
+Configurations Searched: 13
+
+- Graph with 10 nodes and 13 edges
+Greedy search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 38
+Configurations Searched: 1
+
+- Graph with 10 nodes and 13 edges
+Greedy Heuristic search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 39
+Configurations Searched: 1
+
+- Graph with 11 nodes and 18 edges
+Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 105
+Configurations Searched: 28
+
+- Graph with 11 nodes and 18 edges
+Greedy search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 53
+Configurations Searched: 1
+
+- Graph with 11 nodes and 18 edges
+Greedy Heuristic search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 54
+Configurations Searched: 1
+
+- Graph with 12 nodes and 19 edges
+Exhaustive Vizing search: 5
+Time to Find: 0.0019989013671875 seconds
+Basic Operations: 3719
+Configurations Searched: 1235
+
+- Graph with 12 nodes and 19 edges
+Greedy search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 56
+Configurations Searched: 1
+
+- Graph with 12 nodes and 19 edges
+Greedy Heuristic search: 5
+Time to Find: 0.001001596450805664 seconds
+Basic Operations: 57
+Configurations Searched: 1
+
+- Graph with 13 nodes and 22 edges
+Exhaustive Vizing search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 87
+Configurations Searched: 22
+
+- Graph with 13 nodes and 22 edges
+Greedy search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 65
+Configurations Searched: 1
+
+- Graph with 13 nodes and 22 edges
+Greedy Heuristic search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 66
+Configurations Searched: 1
+
+- Graph with 14 nodes and 26 edges
+Exhaustive Vizing search: 6
+Time to Find: 0.0 seconds
+Basic Operations: 314
+Configurations Searched: 84
+
+- Graph with 14 nodes and 26 edges
+Greedy search: 7
+Time to Find: 0.0 seconds
+Basic Operations: 77
+Configurations Searched: 1
+
+- Graph with 14 nodes and 26 edges
+Greedy Heuristic search: 7
+Time to Find: 0.0009992122650146484 seconds
+Basic Operations: 78
+Configurations Searched: 1
+
+- Graph with 15 nodes and 28 edges
+Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 127
+Configurations Searched: 28
+
+- Graph with 15 nodes and 28 edges
+Greedy search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 83
+Configurations Searched: 1
+
+- Graph with 15 nodes and 28 edges
+Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 84
+Configurations Searched: 1
+
+- Graph with 16 nodes and 29 edges
+Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 117
+Configurations Searched: 29
+
+- Graph with 16 nodes and 29 edges
+Greedy search: 8
+Time to Find: 0.0010004043579101562 seconds
+Basic Operations: 86
+Configurations Searched: 1
+
+- Graph with 16 nodes and 29 edges
+Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 87
+Configurations Searched: 1
+
+- Graph with 17 nodes and 37 edges
+Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 251
+Configurations Searched: 55
+
+- Graph with 17 nodes and 37 edges
+Greedy search: 9
+Time to Find: 0.0 seconds
+Basic Operations: 110
+Configurations Searched: 1
+
+- Graph with 17 nodes and 37 edges
+Greedy Heuristic search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 111
+Configurations Searched: 1
+
+- Graph with 18 nodes and 39 edges
+Exhaustive Vizing search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 175
+Configurations Searched: 39
+
+- Graph with 18 nodes and 39 edges
+Greedy search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 116
+Configurations Searched: 1
+
+- Graph with 18 nodes and 39 edges
+Greedy Heuristic search: 8
+Time to Find: 0.0009987354278564453 seconds
+Basic Operations: 117
+Configurations Searched: 1
+
+- Graph with 19 nodes and 42 edges
+Exhaustive Vizing search: 7
+Time to Find: 0.0009996891021728516 seconds
+Basic Operations: 597
+Configurations Searched: 146
+
+- Graph with 19 nodes and 42 edges
+Greedy search: 8
+Time to Find: 0.0 seconds
+Basic Operations: 125
+Configurations Searched: 1
+
+- Graph with 19 nodes and 42 edges
+Greedy Heuristic search: 7
+Time to Find: 0.0009992122650146484 seconds
+Basic Operations: 126
+Configurations Searched: 1
+
+- Graph with 20 nodes and 51 edges
+Exhaustive Vizing search: 9
+Time to Find: 0.0009987354278564453 seconds
+Basic Operations: 241
+Configurations Searched: 51
+
+- Graph with 20 nodes and 51 edges
+Greedy search: 9
+Time to Find: 0.0 seconds
+Basic Operations: 152
+Configurations Searched: 1
+
+- Graph with 20 nodes and 51 edges
+Greedy Heuristic search: 9
+Time to Find: 0.0010073184967041016 seconds
+Basic Operations: 153
+Configurations Searched: 1
+
+- Graph with 21 nodes and 51 edges
+Exhaustive Vizing search: 9
+Time to Find: 0.0 seconds
+Basic Operations: 246
+Configurations Searched: 51
+
+- Graph with 21 nodes and 51 edges
+Greedy search: 9
+Time to Find: 0.00099945068359375 seconds
+Basic Operations: 152
+Configurations Searched: 1
+
+- Graph with 21 nodes and 51 edges
+Greedy Heuristic search: 9
+Time to Find: 0.00099945068359375 seconds
+Basic Operations: 153
+Configurations Searched: 1
+

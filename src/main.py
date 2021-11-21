@@ -70,7 +70,7 @@ class Main:
 
 		if self.greedy:
 			self.handle_results(*self.ci_calculator.greedy_coloring(G, self.order_degree_heur),\
-				"Greedy_Heuristics")
+				"Greedy" + ('_Heuristic' if self.order_degree_heur else ''))
 
 
 	def handle_results(self, ci, colored_G, total_time, basic_operations, total_config_searches, strategy):

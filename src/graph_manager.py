@@ -83,7 +83,7 @@ class Graph_Manager:
 		# be calculated but as if each edge represents two edges, one for each direction
 		G = nx.to_undirected(G)
 
-		logging.info(f"Generated Connected Graph with {num_nodes} vertices and {nx.number_of_edges(G)}, probability of edges {edge_prob}\n")
+		logging.info(f"Generated Connected Graph with {num_nodes} vertices and {nx.number_of_edges(G)} edges, probability of edges {edge_prob}")
 
 		self.save_graph(G)
 	
