@@ -71,14 +71,12 @@ class Chromatic_Index_Calc:
         else:
             ordered_edges = edges
         
-        # 1st heuristic
-        # assign colors to the first highest adjacent edge first
+        # assign a color to the first edge
         highest_conn_edge = ordered_edges.pop(0)
         edges_colors, current_new_color = \
             self.assign_color(edges_colors, highest_conn_edge, current_new_color, current_new_color)
         basic_operations += 1
 
-        # second heuristic + greedy approach
         # color edges starting by the highest adjacent edges
         for edge in ordered_edges:
 
@@ -169,8 +167,8 @@ class Chromatic_Index_Calc:
 
         # Vizing Theorem
         if vizing_theorem:
-            highest_edge_degree = sorted(G.degree, key=lambda x: x[1], reverse=True)[0][1]
-            m_values = [highest_edge_degree + 1, highest_edge_degree]
+            highest_node_degree = sorted(G.degree, key=lambda x: x[1], reverse=True)[0][1]
+            m_values = [highest_node_degree + 1, highest_node_degree]
             basic_operations += 1
         else:
             m_values = [1]
