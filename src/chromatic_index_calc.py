@@ -63,7 +63,7 @@ class Chromatic_Index_Calc:
         # get adjacency matrix for edges and list of ordered edges descending by their edge connectivity
         adjacent_edges = self.edge_connectivity(edges)
         basic_operations += 1
-        
+
         # sort by highest edge connectivity
         if order_degree_heur:
             ordered_edges = sorted(edges, key= lambda x: len(adjacent_edges[x]), reverse=True)
@@ -105,9 +105,11 @@ class Chromatic_Index_Calc:
 
         total_time = time.time() - start_time
 
-        nx.set_edge_attributes(G,
-            {edge: self.colors[color] for edge, color in edges_colors.items()},
-            'color')
+        # happens for graphs with chromatic indexes bigger than 148
+        if chromatic_index <= len(self.colors):
+            nx.set_edge_attributes(G,
+                {edge: self.colors[color] for edge, color in edges_colors.items()},
+                'color')
     
         total_config_searchs += 1
 

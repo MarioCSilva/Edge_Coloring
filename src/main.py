@@ -19,8 +19,15 @@ class Main:
 
 	def usage(self):
 		print("Usage: python3 main.py\
+			\n\t-h <Shows available arguments>\
 			\n\t-n <Number of Nodes for the Graph to be used for any operation: int>\
-			\n\t-g <Generate Graph>")
+			\n\t-ge <Generate Graph>\
+			\n\t-e <Exhaustive M-coloring Search>\
+			\n\t-v <Vizing Theorem>\
+			\n\t-p <Permutations>\
+			\n\t-gr <Greedy Search>\
+			\n\t-h <Heuristic to order Edges>\
+			\n\t-s <Show plot of graphs>")
 		sys.exit()
 
 
