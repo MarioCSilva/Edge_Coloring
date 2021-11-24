@@ -206,10 +206,6 @@ class Chromatic_Index_Calc:
 
         edges = list(G.edges())
 
-        # get all orders from which it is possible to start coloring
-        all_permutations_edges = list(it.permutations(edges))
-        basic_operations += 1
-
         # get adjacency matrix for edges and list of ordered edges descending by their edge connectivity
         adjacent_edges = self.edge_connectivity(edges)
         basic_operations += 1
@@ -217,7 +213,8 @@ class Chromatic_Index_Calc:
         chromatic_index = float('inf')
         final_edge_colors = {}
 
-        for edges in all_permutations_edges:
+        # iterate over all orders from which it is possible to start coloring
+        for edges in it.permutations(edges):
             edges = list(edges)
             edges_colors = {edge: -1 for edge in edges}
             current_new_color = 0
