@@ -1,4 +1,4 @@
-# Graph_Chromatic_Index
+# Edge Coloring (Chromatic Index) Problem
 
 Project under the course of Advanced Algorithms with the main objective of finding the chromatic index of graphs using exhaustive search and also with greedy search heuristics.
 
