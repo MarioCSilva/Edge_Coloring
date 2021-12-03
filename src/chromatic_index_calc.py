@@ -3,6 +3,7 @@ import logging
 import networkx as nx
 import time
 from matplotlib import colors as mcolors
+from random import seed, shuffle
 import numpy as np
 import itertools as it
 
@@ -13,6 +14,7 @@ class Chromatic_Index_Calc:
     def __init__(self):
         self.seed = 93430
         self.colors = list(mcolors.CSS4_COLORS.values())
+        seed(self.seed)
         np.random.seed(self.seed)
         np.random.shuffle(self.colors)
 
@@ -50,9 +52,12 @@ class Chromatic_Index_Calc:
         return edges_colors, current_new_color
 
 
-    def greedy_coloring(self, G, order_degree_heur):
+    def greedy_coloring(self, G, order_degree_heur=False, recoloring=0):
         basic_operations = 0
         total_config_searchs = 0
+
+        chromatic_index = float('inf')
+        final_edge_colors = {}
 
         start_time = time.time()
 
@@ -71,48 +76,63 @@ class Chromatic_Index_Calc:
         else:
             ordered_edges = edges
         
-        # assign a color to the first edge
-        highest_conn_edge = ordered_edges.pop(0)
-        edges_colors, current_new_color = \
-            self.assign_color(edges_colors, highest_conn_edge, current_new_color, current_new_color)
-        basic_operations += 1
+        # recoloring a number of times passed as argument using different orders
+        # has default value of zero, which means only colors with one order of edges
+        # else it shuffles the list of edges and recolors them and stores best solution found
+        for n_attempt in range(recoloring + 1):
 
-        # color edges starting by the highest adjacent edges
-        for edge in ordered_edges:
+            ordered_edges_temp = ordered_edges.copy()
 
-            # skip if edge has a color already assigned
-            if edges_colors[edge] != -1:
-                continue
+            if n_attempt != 0:
+                shuffle(ordered_edges_temp)
+            
+            current_new_color = 0
+            edges_colors = {edge: -1 for edge in edges}
 
-            # temporary sets to store used colors by adjacent edges
-            # and the adjacent edges that are uncolored so they can be assigned later
-            used_colors = set()
-            for e in adjacent_edges[edge]:
-                if edges_colors[e] != -1:
-                    used_colors.add(edges_colors[e])
-            basic_operations += 1
-
-            # get available color for this edge
-            available_color = self.get_available_color(current_new_color, used_colors)
-            basic_operations += 1
-
-            # assign available color to current edge
+            # assign a color to the first edge
+            highest_conn_edge = ordered_edges_temp.pop(0)
             edges_colors, current_new_color = \
-                self.assign_color(edges_colors, edge, current_new_color, available_color)
+                self.assign_color(edges_colors, highest_conn_edge, current_new_color, current_new_color)
             basic_operations += 1
 
-        chromatic_index = current_new_color
+            # color edges starting by the highest adjacent edges
+            for edge in ordered_edges_temp:
+
+                # skip if edge has a color already assigned
+                if edges_colors[edge] != -1:
+                    continue
+
+                # temporary sets to store used colors by adjacent edges
+                # and the adjacent edges that are uncolored so they can be assigned later
+                used_colors = set()
+                for e in adjacent_edges[edge]:
+                    if edges_colors[e] != -1:
+                        used_colors.add(edges_colors[e])
+                basic_operations += 1
+
+                # get available color for this edge
+                available_color = self.get_available_color(current_new_color, used_colors)
+                basic_operations += 1
+
+                # assign available color to current edge
+                edges_colors, current_new_color = \
+                    self.assign_color(edges_colors, edge, current_new_color, available_color)
+                basic_operations += 1
+
+            total_config_searchs += 1
+            
+            if current_new_color <= chromatic_index:
+                chromatic_index = current_new_color
+                final_edge_colors = edges_colors.copy()
 
         total_time = time.time() - start_time
 
         # happens for graphs with chromatic indexes bigger than 148
         if chromatic_index <= len(self.colors):
             nx.set_edge_attributes(G,
-                {edge: self.colors[color] for edge, color in edges_colors.items()},
+                {edge: self.colors[color] for edge, color in final_edge_colors.items()},
                 'color')
     
-        total_config_searchs += 1
-
         return chromatic_index, G, total_time, basic_operations, total_config_searchs
 
 
@@ -201,6 +221,7 @@ class Chromatic_Index_Calc:
 
     def exhaustive_perms_coloring(self, G):
         basic_operations = 0
+        total_config_searchs = 0
         
         start_time = time.time()
 
@@ -215,6 +236,8 @@ class Chromatic_Index_Calc:
 
         # iterate over all orders from which it is possible to start coloring
         for edges in it.permutations(edges):
+            total_config_searchs += 1
+
             edges = list(edges)
             edges_colors = {edge: -1 for edge in edges}
             current_new_color = 0
@@ -257,8 +280,6 @@ class Chromatic_Index_Calc:
 
         total_time = time.time() - start_time
         
-        total_config_searchs = len(all_permutations_edges)
-
         nx.set_edge_attributes(G,
             {edge: self.colors[color] for edge, color in final_edge_colors.items()},
             'color')

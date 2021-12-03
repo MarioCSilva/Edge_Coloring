@@ -74,7 +74,7 @@ class Graph_Manager:
 			# this is only used for testing purposes of very large graphs
 			# which will allow nodes on very close positions
 			positions = { node: (pos[0], pos[1]) for node, pos\
-				in nx.spring_layout(G, seed=self.SEED).items() }
+				in nx.spring_layout(G, k=2, seed=self.SEED).items() }
 
 		nx.set_node_attributes(G, positions, 'pos')
 

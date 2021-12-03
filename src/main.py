@@ -8,8 +8,8 @@ import networkx as nx
 class Main:
 	def __init__(self):
 		self.num_nodes, self.generate, self.show_graph, self.exhaustive,\
-			self.greedy, self.order_degree_heur, self.vizing_theorem, self.permutations =\
-			self.check_arguments()
+			self.greedy, self.order_degree_heur, self.vizing_theorem,\
+			self.permutations, self.recoloring = self.check_arguments()
 		
 		self.graph_manager = Graph_Manager()
 		self.ci_calculator = Chromatic_Index_Calc()
@@ -26,7 +26,8 @@ class Main:
 			\n\t-v <Vizing Theorem>\
 			\n\t-p <Permutations>\
 			\n\t-gr <Greedy Search>\
-			\n\t-h <Heuristic to order Edges>\
+			\n\t-o <Heuristic to order Edges>\
+			\n\t-r <Number of Times to Recolor Graph: int>\
 			\n\t-s <Show plot of graphs>")
 		sys.exit()
 
@@ -45,6 +46,7 @@ class Main:
 		arg_parser.add_argument('-show_graph', action='store_true')
 		arg_parser.add_argument('-order_degree_heur', action='store_true')
 		arg_parser.add_argument('-permutations', action='store_true')
+		arg_parser.add_argument('-recoloring', nargs=1, type=int, default=[0])
 
 		try:
 			args = arg_parser.parse_args()
@@ -54,8 +56,9 @@ class Main:
 		if args.help:
 			self.usage()
 
-		return args.num_nodes[0], args.generate, args.show_graph, args.exhaustive,\
-			args.greedy, args.order_degree_heur, args.vizing_theorem, args.permutations
+		return args.num_nodes[0], args.generate, args.show_graph,\
+				args.exhaustive, args.greedy, args.order_degree_heur,\
+				args.vizing_theorem, args.permutations, args.recoloring[0]
 
 
 	def handle_args(self):
@@ -76,8 +79,9 @@ class Main:
 				"Exhaustive_Permutations")
 
 		if self.greedy:
-			self.handle_results(*self.ci_calculator.greedy_coloring(G, self.order_degree_heur),\
-				"Greedy" + ('_Heuristic' if self.order_degree_heur else ''))
+			self.handle_results(*self.ci_calculator.greedy_coloring(G, self.order_degree_heur, self.recoloring),\
+				"Greedy" + ('_Heuristic' if self.order_degree_heur else '') +\
+				('_Recolored_{self.recoloring}' if self.recoloring else ''))
 
 
 	def handle_results(self, ci, colored_G, total_time, basic_operations, total_config_searches, strategy):
