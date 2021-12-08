@@ -34,7 +34,7 @@ class Main:
 
 	def check_arguments(self):
 		arg_parser = argparse.ArgumentParser(
-			prog="Indexer",
+			prog="Edge Coloring",
 			usage=self.usage
 		)
 		arg_parser.add_argument('-help', action='store_true')
